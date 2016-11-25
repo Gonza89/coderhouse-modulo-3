@@ -1,7 +1,7 @@
-.rating {
+/*.rating {
     unicode-bidi: bidi-override;
     direction: rtl;
-    font-size: 15px;
+    font-size: 16px;
 }
 .rating span.star {
     font-family: FontAwesome;
@@ -21,4 +21,10 @@
 .rating span.star:hover~span.star:before {
     content: "\f005";
     color: #e3cf7a;
+}*/
+.thumbnail img {
+    width: 100%;
+}
+.caption h4 {
+    white-space: nowrap;
 }
