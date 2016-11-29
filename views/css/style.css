@@ -22,6 +22,9 @@
     content: "\f005";
     color: #e3cf7a;
 }*/
+.thumbnail {
+  padding: 0;
+}
 .thumbnail img {
     width: 100%;
 }
