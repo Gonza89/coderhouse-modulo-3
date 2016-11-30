@@ -24,8 +24,50 @@
     </div>
   </div>
 
-  
+  <!-- VIEWS -->
 
+  <div class="container margen" ng-controller="ProductController">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="titulo">
+          <h2>{{product.name}}</h2>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="raw">
+          <div class="col-md-3">
+            <img src="{{product.image}}" alt="{{product.name}}">
+          </div>
+        </div>
+        <div class="raw">
+          <div class="col-md-9">
+            <div class="caption">
+              <h4>{{product.name}}</h4>
+              <h4>{{product.price}}</h4>
+              <div ng-if = product.featured>
+                <h4>ES FEATURED</h4>
+              </div>
+              <div ng-repeat = "product in product.tags">
+                {{tags}}
+              </div>
+              <p>{{product.description}}</p>
+            </div>
+            <div class="rating">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- VIEWS -->
 
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="js/app.js"></script>

@@ -4,6 +4,12 @@ angular.module("My-app", []"dependencias")   declarando una aplicacion
 
 angular.module("My-app") // haciendo referencia una instancia ya creada
 
+
+ng-include
+ng-if
+ng-show
+ng-repeat
+
 */
 
 (function(){
@@ -21,10 +27,14 @@ angular.module("My-app") // haciendo referencia una instancia ya creada
       $scope.destacados = "Productos Destacados";
     })
     .controller("ProductController", function ($scope) {
-      $scope.producto = "Producto";
-      $scope.precio = "$200";
-      $scope.descripcion ='Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
-      $scope.image ="http://placehold.it/180x240"
+      $scope.product ={
+        name: "Producto",
+        price: "$200",
+        description :'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        image :"http://placehold.it/180x240",
+        featured: true,
+        tags: ['computadora', 'diseño', 'caro', 'otro']
+      }
     })
 
 })();
