@@ -9,6 +9,7 @@ ng-include
 ng-if
 ng-show
 ng-repeat
+ng-bind <h1 ng-bind='title'></h1>
 
 */
 

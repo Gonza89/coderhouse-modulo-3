@@ -2,21 +2,31 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="titulo">
-        <h2>{{producto}}</h2>
+        <h2>{{product.name}}</h2>
       </div>
     </div>
     <div class="panel-body">
       <div class="raw">
         <div class="col-md-3">
-          <img src="{{image}}" alt="{{producto}}">
+          <img src="{{product.image}}" alt="{{product.name}}">
         </div>
       </div>
       <div class="raw">
         <div class="col-md-9">
           <div class="caption">
-            <h4>{{producto}}</h4>
-            <h4>{{precio}}</h4>
-            <p>{{descripcion}}</p>
+            <h4>{{product.name}}</h4>
+            <h4>{{product.price}}</h4>
+            <p>{{product.description}}</p>
+            <div ng-show="product.featured">
+              <h3> ES FEATURED</h3>
+            </div>
+            <div class="tags">
+              <ul>
+                <li ng-repeat="tag in product.tags">
+                  {{tag}}
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="rating">
             <span class="glyphicon glyphicon-star"></span>

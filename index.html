@@ -15,9 +15,11 @@
       <div class="col-md-12">
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <span>{{name}}</span>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><p class="navbar-text">{{name}}</p></li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -26,33 +28,122 @@
 
   <!-- VIEWS -->
 
-  <div class="container margen" ng-controller="ProductController">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <div class="titulo">
-          <h2>{{product.name}}</h2>
-        </div>
-      </div>
-      <div class="panel-body">
-        <div class="raw">
-          <div class="col-md-3">
-            <img src="{{product.image}}" alt="{{product.name}}">
+  <section id="destacados" class="margen" ng-controller="FeaturedProductController">
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="titulo">
+            <h2>{{ destacados }}</h2>
           </div>
         </div>
-        <div class="raw">
-          <div class="col-md-9">
-            <div class="caption">
-              <h4>{{product.name}}</h4>
-              <h4>{{product.price}}</h4>
-              <div ng-if = product.featured>
-                <h4>ES FEATURED</h4>
+        <div class="panel-body">
+          <div class="raw text-center">
+            <div class="col-sm-4 col-md-4">
+              <img src="http://placehold.it/180x240" alt="">
+              <div class="caption">
+                <h4>producto</h4>
               </div>
-              <div ng-repeat = "product in product.tags">
-                {{tags}}
+              <div class="rating">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
               </div>
-              <p>{{product.description}}</p>
             </div>
-            <div class="rating">
+            <div class="col-sm-4 col-md-4">
+              <img src="http://placehold.it/180x240" alt="">
+              <div class="caption">
+                <h4>producto</h4>
+              </div>
+              <div class="rating">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <img src="http://placehold.it/180x240" alt="">
+              <div class="caption">
+                <h4>producto</h4>
+              </div>
+              <div class="rating">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="productos" ng-controller="ListProductController">
+    <div class="container">
+      <div class="titulo">
+        <h2>{{ title }}</h2>
+      </div>
+      <div class="raw">
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/160x200" alt="">
+            <div class="caption">
+              <h4 class="pull-right">precio</h4>
+              <h4>producto</h4>
+            </div>
+            <div class="rating text-center">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/160x200" alt="">
+            <div class="caption">
+              <h4 class="pull-right">precio</h4>
+              <h4>producto</h4>
+            </div>
+            <div class="rating text-center">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/160x200" alt="">
+            <div class="caption">
+              <h4 class="pull-right">precio</h4>
+              <h4>producto</h4>
+            </div>
+            <div class="rating text-center">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/160x200" alt="">
+            <div class="caption">
+              <h4 class="pull-right">precio</h4>
+              <h4>producto</h4>
+            </div>
+            <div class="rating text-center">
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star"></span>
@@ -63,7 +154,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
 
 
