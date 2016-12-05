@@ -37,36 +37,10 @@
         </div>
         <div class="panel-body">
           <div class="raw text-center">
-            <div class="col-sm-4 col-md-4">
-              <img src="http://placehold.it/180x240" alt="">
+            <div class="col-sm-4 col-md-4" ng-repeat="product in products">
+              <img src="{{product.image}}" alt="">
               <div class="caption">
-                <h4>producto</h4>
-              </div>
-              <div class="rating">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-4">
-              <img src="http://placehold.it/180x240" alt="">
-              <div class="caption">
-                <h4>producto</h4>
-              </div>
-              <div class="rating">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-              </div>
-            </div>
-            <div class="col-sm-4 col-md-4">
-              <img src="http://placehold.it/180x240" alt="">
-              <div class="caption">
-                <h4>producto</h4>
+                <h4>{{product.title}}</h4>
               </div>
               <div class="rating">
                 <span class="glyphicon glyphicon-star"></span>
@@ -111,7 +85,7 @@
 
   <!-- VIEWS -->
 
-  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="js/app.js"></script>
+<!--  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="./js/app-old.js"></script>  -->
 </body>
 </html>
