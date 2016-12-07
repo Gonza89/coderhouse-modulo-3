@@ -27,60 +27,7 @@
   </div>
 
   <!-- VIEWS -->
-  <section id="destacados" class="margen" ng-controller="FeaturedProductController">
-    <div class="container">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="titulo">
-            <h2>{{ destacados }}</h2>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="raw text-center">
-            <div class="col-sm-4 col-md-4" ng-repeat="product in products">
-              <img src="{{product.image}}" alt="">
-              <div class="caption">
-                <h4>{{product.title}}</h4>
-              </div>
-              <div class="rating">
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="productos" ng-controller="ListProductController">
-    <div class="container">
-      <div class="titulo">
-        <h2>{{ title }}</h2>
-      </div>
-      <div class="raw">
-        <div class="col-sm-4 col-md-3" ng-repeat="product in products">
-          <div class="thumbnail">
-            <img src="{{product.image}}" alt="">
-            <div class="caption">
-              <h4 class="pull-right">{{product.precio}}</h4>
-              <h4>{{product.title}}</h4>
-            </div>
-            <div class="rating text-center">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <ui-view></ui-view>
 
 
   <!-- VIEWS -->
