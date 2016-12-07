@@ -13,7 +13,7 @@ app
     name: 'product',
     url: '/product/:id',
     controller: 'ProductController',
-    templateUrl: '../views/products.tpl.html'
+    templateUrl: '../views/individual-product.tpl.html'
   })
   .state({
     name: '404',
