@@ -42,3 +42,10 @@ body{
   border: 1px solid #d3d3d3;
   display: inline-block;
 }
+
+.ng-cloak {
+  display: none !important;
+}
+.active {
+  color: red !important;
+}

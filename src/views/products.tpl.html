@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="panel-body">
-        <div class="raw text-center">
+        <div class="row text-center">
           <div class="col-sm-4 col-md-4" ng-repeat="product in products">
             <img src="{{product.image}}" alt="">
             <div class="caption">
@@ -31,7 +31,7 @@
     <div class="titulo">
       <h2>{{ title }}</h2>
     </div>
-    <div class="raw">
+    <div class="row">
       <div class="col-sm-4 col-md-3" ng-repeat="product in products">
         <div class="thumbnail">
           <img src="{{product.image}}" alt="">
@@ -39,12 +39,14 @@
             <h4 class="pull-right">{{product.precio}}</h4>
             <h4>{{product.title}}</h4>
           </div>
-          <div class="rating text-center">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
+          <div class="rating text-center" ng.repeat='productItem in products'>
+            <list-item
+              product='productItem'
+              type="{{productItem.precio}}"
+              rate-up="increase(productItem)"
+              rate-down="decrease(productItem)">
+
+              </list-item>
           </div>
         </div>
       </div>
