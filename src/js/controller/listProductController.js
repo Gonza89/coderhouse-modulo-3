@@ -21,7 +21,7 @@ app
    description :'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
    image: 'http://placehold.it/160x200',
    precio: '$5000',
-   featured: true,
+   featured: false,
    tags: ['pc'],
    rating: 3
  },{
@@ -33,6 +33,33 @@ app
    featured: false,
    tags: ['vieja', 'partes'],
    rating: 2
+ },{
+   id: 3,
+   title: 'mouse',
+   description :'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+   image: 'http://placehold.it/160x200',
+   precio: '$250',
+   featured: false,
+   tags: ['pc', 'mouse'],
+   rating: 5
+ },{
+   id: 4,
+   title: 'teclado',
+   description :'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+   image: 'http://placehold.it/160x200',
+   precio: '$400',
+   featured: true,
+   tags: ['pc', 'teclado', 'periferico'],
+   rating: 3
+ },{
+   id: 5,
+   title: 'parlantes',
+   description :'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+   image: 'http://placehold.it/160x200',
+   precio: '$800',
+   featured: true,
+   tags: ['pc', 'perifericos'],
+   rating: 4
  }];
 
 })
