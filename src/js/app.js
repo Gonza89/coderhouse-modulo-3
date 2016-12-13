@@ -7,3 +7,4 @@ var ft = require('./controller/featuredProductsController');
 var prod = require('./controller/productController');
 var listItemDirective = require('./directives/listItem');
 var rateDirective = require('./directives/rating');
+var featuredDirective = require('./directives/featured-products');

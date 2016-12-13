@@ -8,18 +8,13 @@
       </div>
       <div class="panel-body">
         <div class="row text-center">
-          <div class="col-sm-4 col-md-4" ng-repeat="product in products">
-            <img src="{{product.image}}" alt="">
-            <div class="caption">
-              <h4>{{product.title}}</h4>
-            </div>
-            <div class="rating">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-            </div>
+          <div class="col-sm-4 col-md-4">
+            <featured-products
+              products="featureds"
+              title="Featured Products"
+              rate-up='increase'
+              rate-down='decrease'
+              ></featured-products>
           </div>
         </div>
       </div>

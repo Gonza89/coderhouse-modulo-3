@@ -1,7 +1,7 @@
 var app = require('../Myapp')
 
 app
- .directive('rating', function($compile) {
+  .directive('rating', function($compile) {
     return {
       restrict: 'E',
       scope: {

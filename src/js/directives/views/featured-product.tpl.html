@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <div class="row">
+    <div ng-repeat="product in products">
+      <div class="col-md-2">
+        <a href="">
+          <img src="{{product.image}}">
+          <h5>{{product.title}}</h5>
+          <h6>{{product.rating}}</h6>
+        </a>
+        <button ng-click="rateUp(product)">Rate up</button>
+        <button ng-click="rateDown(product)">Rate Down</button>
+      </div>
+    </div>
+  </div>
+</div>

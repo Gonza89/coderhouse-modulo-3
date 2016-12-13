@@ -62,6 +62,11 @@ app
    rating: 4
  }];
 
+$scope.featureds = $scope.products.filter(function(i) {
+  return i.featured === true;
+})
+
+
 })
 
 module.exports = 'ListProductController';
