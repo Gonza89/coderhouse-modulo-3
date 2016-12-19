@@ -2,28 +2,31 @@
   <div class="row">
     <div class="col-md-4">
       <h3>Creacion de Productos</h3>
-      <form novalidate ng-submit="submit()" name="createProduct">
+      <form name="createProduct" novalidate ng-submit="submit()">
         <div class="form-group">
           <label for="title">Título *</label>
-          <input type="text" class="form-control" name="title" id="title" placeholder="Titulo" required ng-model="product.title">
+          <input type="text" class="form-control" name="title" id="title" placeholder="Titulo"
+            required
+            ng-model="product.title"
+            ng-pattern="/^[A-Za-z\s]+$/">
+
           <p class="help-block"
               ng-class="{'error' : createProduct.title.$invalid && !createProduct.title.$pristine}"
               ng-style="{'display': (createProduct.title.$invalid && !createProduct.title.$pristine) ? 'block' : 'none'}"
               >Input invalido</p>
         </div>
         <div class="form-group">
-          <label for="email">Email *</label>
+          <label for="email">Email </label>
           <input type="email" name="" id="email" class="form-control" name="email" placeholder="Email"
-          ng-model="product.email"
-          ng-patter=""
-          required
-          >
+          ng-model="product.email">
+          <!-- ng-pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})+$/" -->
+
           <p class="help-block"
               ng-class="{'error' : createProduct.email.$invalid && !createProduct.email.$pristine}"
               ng-style="{'display': (createProduct.email.$invalid && !createProduct.email.$pristine) ? 'block' : 'none'}"
               >Input invalido</p>
-
         </div>
+
         <div class="form-group">
           <label for="description">Description </label>
           <textarea type="text" id="description" name="description" rows="5" class="form-control" placeholder="Description"
@@ -34,10 +37,40 @@
               >
           </textarea>
           {{count}}
-
         </div>
+
         <div class="form-group">
-          <button id="boton" type="submit" class="btn btn-primary" ng-disable="createProduct.$invalid">Agregar</button>
+          <label for="image">Image *</label>
+          <input type="text" class="form-control" name="image" id="image" placeholder="Link image" required ng-model="product.image">
+          <p class="help-block"
+              ng-class="{'error' : createProduct.image.$invalid && !createProduct.image.$pristine}"
+              ng-style="{'display': (createProduct.image.$invalid && !createProduct.image.$pristine) ? 'block' : 'none'}"
+              >Input invalido</p>
+        </div>
+
+        <div class="form-group">
+          <label for="precio">Precio *</label>
+          <input id="precio" type="text" name="precio" class="form-control" placeholder="1000"
+            required
+            ng-model="product.precio"
+            ng-pattern="/^[0-9\s]+$/">
+          <p class="help-block"
+              ng-class="{'error' : createProduct.precio.$invalid && !createProduct.precio.$pristine}"
+              ng-style="{'display': (createProduct.precio.$invalid && !createProduct.precio.$pristine) ? 'block' : 'none'}"
+              >Input invalido</p>
+        </div>
+
+        <div class="form-group">
+          <label for="tags">Tags </label>
+          <input id="tags" type="text" name="tags" class="form-control" placeholder="tag, tag"
+            ng-model="product.tags">
+        </div>
+
+
+
+
+        <div class="form-group">
+          <button id="boton" type="submit" class="btn btn-default" ng-disabled="createProduct.$invalid">Agregar</button>
         </div>
     </form>
     </div>
