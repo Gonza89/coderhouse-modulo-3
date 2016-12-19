@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Creacion de Productos</h3>
+      <form novalidate ng-submit="submit()" name="createProduct">
+        <div class="form-group">
+          <label for="title">Título *</label>
+          <input type="text" class="form-control" name="title" id="title" placeholder="Titulo" required ng-model="product.title">
+          <p class="help-block"
+              ng-class="{'error' : createProduct.title.$invalid && !createProduct.title.$pristine}"
+              ng-style="{'display': (createProduct.title.$invalid && !createProduct.title.$pristine) ? 'block' : 'none'}"
+              >Input invalido</p>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" name="" id="email" class="form-control" name="email" placeholder="Email"
+          ng-model="product.email"
+          ng-patter=""
+          required
+          >
+          <p class="help-block"
+              ng-class="{'error' : createProduct.email.$invalid && !createProduct.email.$pristine}"
+              ng-style="{'display': (createProduct.email.$invalid && !createProduct.email.$pristine) ? 'block' : 'none'}"
+              >Input invalido</p>
+
+        </div>
+        <div class="form-group">
+          <label for="description">Description </label>
+          <textarea type="text" id="description" name="description" rows="5" class="form-control" placeholder="Description"
+
+              ng-model="product.description"
+              ng-keyup="updateCount()"
+
+              >
+          </textarea>
+          {{count}}
+
+        </div>
+        <div class="form-group">
+          <button id="boton" type="submit" class="btn btn-primary" ng-disable="createProduct.$invalid">Agregar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>

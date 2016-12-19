@@ -12,9 +12,9 @@ app
         precio: '@',
         rateUp: '&', //busca un metodo en el scope del padre
         rateDown: '&'
-      }
+      },
     //  link: function($scope, elem, attrs) {
-    //    $scope.product.rating++;
+    //  console.log(  $scope.product.rating++;);
     //  }
     }
    })

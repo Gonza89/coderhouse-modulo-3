@@ -49,3 +49,8 @@ body{
 .active {
   color: red !important;
 }
+
+.error{
+  color: red;
+  padding: 0.5em 0;
+}

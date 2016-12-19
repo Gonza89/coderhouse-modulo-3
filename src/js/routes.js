@@ -15,6 +15,12 @@ app
       templateUrl: '../views/products.tpl.html'
     })
     .state({
+      name: 'create',
+      url: '/crear',
+      controller: 'createProduct',
+      templateUrl: '../views/createProduct.tpl.html'
+    })
+    .state({
       name: 'product',
       url: '/product/:id',
       controller: 'ProductController',
